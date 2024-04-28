@@ -1,0 +1,19 @@
+#stack 40000 50000
+// ^ set stack from 40000 to 50000
+
+func x(int v0: 6789, char* v1: 5823) {
+    word number: 10000 = 50; // manually assign it to address 10000
+
+    label printV1
+
+        print(v1);
+
+    label return
+
+        ret 10; /* ret is usize */
+}
+
+func main() {
+    usize n = x(2, 3); // added to stack
+    ret n;
+}
